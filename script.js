@@ -51,9 +51,6 @@ document.querySelector('#blackjack-hit-btn').addEventListener('click', blackjack
 
 //Callback funstion that gets executed once HIT button is pressed
 function blackjackHit() {
-    blackjackGame['gameStarted'] = true;
-    //We should be able to click HIT only when STAND button has not been clicked
-    // if (blackjackGame['isStand'] === false) {
     let cardVal = randomCardNumber(); //1,2,3,4,5,6,7,8,9,10,J,Q,K,A
     let cardType = randomCardType(); //D, H, C, S
     let card = cardVal + cardType; // Combinations like 2D, 6S
@@ -61,7 +58,28 @@ function blackjackHit() {
     showCard(YOU, card);
     updateScore(YOU, cardVal);
     showScore(YOU);
-    // }
+
+    if (YOU['score'] > 21) {
+        //The player lost. So do nothing on clicking STAND
+
+        //Update the score table data
+        blackjackGame['losses']++;
+
+        showWinner(DEALER);
+
+        //Disable the HIT button
+        document.querySelector('#blackjack-hit-btn').disabled = true;
+
+        //Disable the STAND button
+        document.querySelector('#blackjack-stand-btn').disabled = true;
+
+        //Enable DEAL button to perform its operations on click
+        blackjackGame['turnsOver'] = true;
+    }
+    else {
+        //We should be able to click HIT only when STAND button has not been clicked
+        blackjackGame['gameStarted'] = true;
+    }
 
 }
 
@@ -205,6 +223,7 @@ function blackjackDeal() {
         document.querySelector('#blackjack-result').style.color = 'white';
 
         //Reset buttons
+        document.querySelector('#blackjack-stand-btn').disabled = false;
         document.querySelector('#blackjack-hit-btn').disabled = false;
         blackjackGame['gameStarted'] === false;
         blackjackGame['turnsOver'] === false;
