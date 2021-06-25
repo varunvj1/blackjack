@@ -175,6 +175,9 @@ function dealerLogic() {
             //Disable HIT button 
             blackjackGame['turnsOver'] = true;
 
+            //Disable the STAND button
+            document.querySelector('#blackjack-stand-btn').disabled = true;
+
             setTimeout(showWinner(computeWinner()), 1000);
         }
         else {
