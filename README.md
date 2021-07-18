@@ -1,7 +1,9 @@
 # About BlackJack
 Blackjack, also known as 21, is a card game where players face off against a dealer. The cards are worth face value, except Aces which is of value 1 or 11, 
-and face cards (J, Q, K) which are of value 10. <br>
+and face cards (J, Q, K) which are of value 10. 
 <br>
+
+![Blackjack](https://i.ibb.co/LQfhv24/Black-Jack2.png)
 <br>
 ## How to Play
 1. Start the game by pressing the ***HIT*** button.
@@ -16,5 +18,7 @@ and face cards (J, Q, K) which are of value 10. <br>
 7. Your cumulative wins, losses and draws is saved and displayed on the scoreboard below.
 >**Remember:** if during any turn (your's or the dealer's), the score becomes more than 21, then that player will be ***BUSTED*** and thus lose. This would mean an automatic win 
 for the other player.
+
+![Win](https://i.ibb.co/n0f5qzG/Blackjack3-0.png)
 
 
