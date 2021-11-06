@@ -8,7 +8,7 @@ and face cards (J, Q, K) which are of value 10.
 ## How to Play
 1. Start the game by pressing the ***HIT*** button.
 2. After the first step, you will get a card, and your current score would be calculated and displayed above.
-3. Press the HIT button again, to get your 2nd card. Keep geeting more cards until you feel you have reached close to 21 (and not over 21).
+3. Press the HIT button again, to get your 2nd card. Keep getting more cards until you feel you have reached close to 21 (and not over 21).
 4. Then press ***STAND*** button. This would mean that you want to end your turn. The dealer (computer) would choose cards now. 
 5. After the dealer's turn is over, the score is compared:
     - If your score is more than dealer, you **WIN**.
